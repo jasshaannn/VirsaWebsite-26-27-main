@@ -269,7 +269,7 @@ const Heads = () => {
     {
       name: "Jasmine Kaur",
       position: "General Secretary",
-      imageUrl: "/headspic/jasmine.jpeg",
+      imageUrl: "/headspic/jasmine.jpg",
       instagramUrl: "https://www.instagram.com/jasmine_28kaur?igsh=e1ZqeXh0dmF0NGl5&utm_source=qr",
       linkedinUrl: "https://www.linkedin.com/in/jasmine-kaur-046887320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },

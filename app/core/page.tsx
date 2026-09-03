@@ -23,28 +23,46 @@ const coreTeamMembers: TeamMember[] = [
     name: "Agam Sarao",
     imageUrl: "/corepic/Agamveer Singh Kaleka.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/agam_sarao11",
+      linkedin:
+        "https://www.linkedin.com/in/agamveer-singh-sarao-32542835b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
     id: 2,
     name: "Agamjot Singh Dhingra",
     imageUrl: "/corepic/Agamjot Singh Dhingra.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/agam_dhingra_?igsi=MThrYTloODVobWRuYQ%3D%3D&utm_source=qr",
+      linkedin:
+        "https://www.linkedin.com/in/agamjot-singh-dhingra-3216b7293/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bkb6bEecIRr6ZcliY%2B3iBtQ%3D%3D",
+    },
   },
   {
     id: 3,
     name: "Amreen Rooprai",
     imageUrl: "/corepic/Amren.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/333amreen",
+      linkedin:
+        "https://www.linkedin.com/in/amreen-rooprai?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
     id: 4,
     name: "Anmol Grewal",
     imageUrl: "/corepic/Anmol Singh Grewal.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/anmol.grwl?igsi=MWhtZzI2aGdpNjQycA%3D%3D&utm_source=qr",
+      linkedin:
+        "https://www.linkedin.com/in/anmol-singh-grewal-689128373?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
     id: 5,
@@ -58,7 +76,11 @@ const coreTeamMembers: TeamMember[] = [
     name: "Avneet Kaur",
     imageUrl: "/corepic/Avneet Kaur.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/avneetsidhu313?igsi=cWp0YXRzc2llZXl6",
+      linkedin: "https://www.linkedin.com/in/avneet-kaur-087691425",
+    },
   },
   {
     id: 7,
@@ -79,7 +101,11 @@ const coreTeamMembers: TeamMember[] = [
     name: "Dilnoor Singh",
     imageUrl: "/corepic/dilnoor.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/whoisdilnoor",
+      linkedin:
+        "https://www.linkedin.com/in/dilnoor-singh-08895b379?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
   },
   {
     id: 10,
@@ -100,14 +126,20 @@ const coreTeamMembers: TeamMember[] = [
     name: "Gunraj Kaur",
     imageUrl: "/corepic/GUNRAJ_KAUR.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/gunraj.k27",
+    },
   },
   {
     id: 13,
     name: "Gunraj Singh",
     imageUrl: "/corepic/Gunraj Singh.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/gunraj_07?igsi=MXd2Y29pM3V5bmN4NQ==",
+      linkedin:
+        "https://www.linkedin.com/in/gunraj-singh-921939287?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
     id: 14,
@@ -118,185 +150,249 @@ const coreTeamMembers: TeamMember[] = [
   },
   {
     id: 15,
-    name: "Hitajveer Singh Dhindsa",
-    imageUrl: "/corepic/Hitajveer Singh Dhindsa.jpeg",
+    name: "Hartaj Singh",
+    imageUrl: "/corepic/Hartaj.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/hartaj_sullar",
+    },
   },
   {
     id: 16,
-    name: "Jaiveer Singh Sidhu",
-    imageUrl: "/corepic/jaiveer.jpeg",
+    name: "Hitajveer Singh Dhindsa",
+    imageUrl: "/corepic/Hitajveer Singh Dhindsa.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/dhindsa_hitaj?igsi=NDlmYmRjOWhveHdy",
+      linkedin:
+        "https://www.linkedin.com/in/hitajveer-singh-dhindsa-74a8b9384?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
     id: 17,
-    name: "Jashan Chauhan",
-    imageUrl: "/corepic/JJASHAN.jpeg",
+    name: "Jaiveer Singh Sidhu",
+    imageUrl: "/corepic/jaiveer.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/jaiveersidhus",
+    },
   },
   {
     id: 18,
-    name: "Jivitesh Partap Singh",
-    imageUrl: "/corepic/Jivetesh.jpeg",
+    name: "Jashan Chauhan",
+    imageUrl: "/corepic/JJASHAN.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/jasshaannn",
+    },
   },
   {
     id: 19,
+    name: "Jivitesh Partap Singh",
+    imageUrl: "/corepic/Jivetesh.jpeg",
+    bio: "", // TODO: add bio
+    socialLinks: {
+      instagram: "https://www.instagram.com/jivi.2202/",
+      linkedin: "https://www.linkedin.com/in/jivitesh-partap-singh-05360137b",
+    },
+  },
+  {
+    id: 20,
     name: "Jobanpreet Singh Dhaliwal",
     imageUrl: "/corepic/Jobanpreet Singh.jpeg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 20,
+    id: 21,
     name: "Karmanjot Singh",
     imageUrl: "/corepic/Karmanjot.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 21,
+    id: 22,
     name: "Karnaaz Kaur",
     imageUrl: "/corepic/Karnaaz Kaur.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/karnaaz_19?igsi=Ymp0MWVzN2w5ZXV4",
+      linkedin:
+        "https://www.linkedin.com/in/karnaaz-kaur-04255237a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
   },
   {
-    id: 22,
+    id: 23,
     name: "Manmeet Singh Malhotra",
     imageUrl: "/corepic/m.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 23,
+    id: 24,
     name: "Nishtha Uppal",
-    imageUrl: "",
+    imageUrl: "/corepic/nishta.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/thisisnishthauppal",
+      
+      linkedin: "https://www.linkedin.com/in/nishtha-uppal-46865737b",
+    },
   },
   {
-    id: 24,
+    id: 25,
     name: "Parminderjeet Singh",
     imageUrl: "/corepic/Parminderjeet Singh.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 25,
-    name: "Ramanbir Singh",
-    imageUrl: "",
+    id: 26,
+    name: "Parneet Singh",
+    imageUrl: "/corepic/Parneet.jpeg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 26,
+    id: 27,
+    name: "Ramanbir Singh",
+    imageUrl: "/corepic/Ramanbir.jpg",
+    bio: "", // TODO: add bio
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/itz_rmn_gill?igsi=MXU3ampjZ2lzZnd2eg%3D%3D&utm_source=qrQ",
+      linkedin:
+        "https://www.linkedin.com/in/ramanbir-singh-318b23393?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    id: 28,
     name: "Ravaljot Kaur Ahluwalia",
     imageUrl: "/corepic/Ravaljot Kaur.jpeg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 27,
+    id: 29,
     name: "Ravneet Sandhu",
     imageUrl: "/corepic/Ravneet Kaur Sandhu.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/Ravneeettt___",
+    },
   },
   {
-    id: 28,
+    id: 30,
     name: "Saanvi Aggarwal",
     imageUrl: "/corepic/Saanvi Aggarwal.jpg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/aggarwal_saanvii",
+      linkedin:
+        "https://www.linkedin.com/in/saanvi-aggarwal-43943a37a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
   },
   {
-    id: 29,
+    id: 31,
     name: "Sabiha Bhandohal",
     imageUrl: "/corepic/Sabiha.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 30,
+    id: 32,
     name: "Sameer",
     imageUrl: "/corepic/sameer.jpeg", // TODO: add photo — placeholder, will show initials until filled in
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/its_sameer1406?igsi=dnkxYTZhZmNtYW16&utm_source=qr",
+      linkedin:
+        "https://www.linkedin.com/in/sameer-saini-41131737a?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
   },
   {
-    id: 31,
+    id: 33,
     name: "Samridh Chopra",
     imageUrl: "/corepic/Samridh Chopra.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 32,
+    id: 34,
     name: "Sehajpal Singh Cheema",
     imageUrl: "/corepic/Sehajpal Singhh.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
-  },
-  {
-    id: 33,
-    name: "Sehajpreet Singh",
-    imageUrl: "/corepic/Sehajpreet Singh.jpeg",
-    bio: "", // TODO: add bio
-    socialLinks: {},
-  },
-  {
-    id: 34,
-    name: "Shubhneet Kaur Sandhu",
-    imageUrl: "/corepic/Shubhneet Kaur.jpg",
-    bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/sehajcheema.12",
+    },
   },
   {
     id: 35,
+    name: "Sehajpreet Singh",
+    imageUrl: "/corepic/Sehajpreet Singh.jpeg",
+    bio: "", // TODO: add bio
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/_sehaj_saini_?igsi=bzhnZTlhejQycThm&utm_source=qr",
+      linkedin:
+        "https://www.linkedin.com/in/sehajpreet-singh-667a5833a?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    },
+  },
+  {
+    id: 36,
+    name: "Shubhneet Kaur Sandhu",
+    imageUrl: "/corepic/Shubhneet Kaur.jpg",
+    bio: "", // TODO: add bio
+    socialLinks: {
+      linkedin:
+        "https://www.linkedin.com/in/shubhneet-kaur-ab98092b3?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
+    id: 37,
     name: "Simargeet Kaur",
     imageUrl: "",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 36,
+    id: 38,
     name: "Suhani Nagpal",
     imageUrl: "/corepic/Suhani Nagpal.jpg",
     bio: "", // TODO: add bio
     socialLinks: {},
   },
   {
-    id: 37,
+    id: 39,
     name: "Sukhmanjot Singh Sandhu",
     imageUrl: "/corepic/Sukhmanjot Singh.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
-  },
-  {
-    id: 38,
-    name: "Talveen Kaur",
-    imageUrl: "/corepic/Talveen Kaur.jpeg",
-    bio: "", // TODO: add bio
-    socialLinks: {},
-  },
-  {
-    id: 39,
-    name: "Tanveer Singh",
-    imageUrl: "/corepic/TAN.jpeg",
-    bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/sukhmanjxt",
+    },
   },
   {
     id: 40,
-    name: "Hartaj Singh",
-    imageUrl: "/corepic/Hartaj.jpeg",
+    name: "Talveen Kaur",
+    imageUrl: "/corepic/Talveen Kaur.jpeg",
     bio: "", // TODO: add bio
-    socialLinks: {},
+    socialLinks: {
+      instagram: "https://www.instagram.com/talveen24",
+    },
+  },
+  {
+    id: 41,
+    name: "Tanveer Singh",
+    imageUrl: "/corepic/TAN.jpeg",
+    bio: "", // TODO: add bio
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/tanveer.singhh_?igsi=YmdxanZrbW93cmxl",
+      linkedin:
+        "https://www.linkedin.com/in/tanveer-singh-06153a362?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
   },
 ];
 

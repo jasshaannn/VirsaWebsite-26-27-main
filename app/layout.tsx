@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import ClientLoadingScreen from "./components/ClientLoadingScreen";
@@ -17,14 +17,24 @@ const inter = Inter({
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#09090b",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "Virsa - Punjabi Cultural Society",
-  description: "Celebrating and preserving Punjabi culture and heritage",
+  title: "VIRSA | Punjabi Cultural Society • TIET",
+  description: "Preserving and celebrating Punjab's living heritage, folk arts, Bhangra, Giddha, and vibrant cultural traditions at Thapar Institute of Engineering & Technology.",
+  keywords: ["Virsa", "Punjabi Cultural Society", "Thapar", "TIET", "Bhangra", "Giddha", "Virsa Mela", "Sham-e-Virasat", "Punjab Heritage"],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -33,11 +43,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="en">
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${playfairDisplay.variable} ${inter.variable} ${poppins.variable} antialiased`}>
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <body
+        className={`${playfairDisplay.variable} ${inter.variable} ${poppins.variable} bg-[#08080a] text-zinc-100 antialiased selection:bg-amber-500/30 selection:text-amber-200 min-h-screen flex flex-col`}
+      >
         <ClientLoadingScreen />
-        {children}
+        <main className="flex-1 w-full">{children}</main>
       </body>
     </html>
   );

@@ -1,10 +1,10 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 import { Button } from "@/app/components/ui/button";
 import {
@@ -17,6 +17,8 @@ import {
 export interface Gallery4Item {
   id: string;
   title: string;
+  category?: string;
+  date?: string;
   description: string;
   href: string;
   image: string;
@@ -28,29 +30,15 @@ export interface Gallery4Props {
   items: Gallery4Item[];
 }
 
-const data = [
-  {
-    id: "shadcn-ui",
-    title: "shadcn/ui: Building a Modern Component Library",
-    description:
-      "Explore how shadcn/ui revolutionized React component libraries by providing a unique approach to component distribution and customization, making it easier for developers to build beautiful, accessible applications.",
-    href: "https://ui.shadcn.com",
-    image:
-      "gur5.jpeg",
-  },
-  // Other sample data items
-];
-
 const Gallery4 = ({
-  title = "Events",
+  title = "Signature Celebrations",
   description = "Discover our vibrant cultural celebrations that showcase the rich heritage of Punjab.",
-  items = data,
+  items,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   useEffect(() => {
     if (!carouselApi) {
@@ -69,179 +57,125 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-12 md:py-16 overflow-hidden bg-gradient-to-b rounded-medium from-gray-900 to-black">
-      <div className="container mx-auto px-4">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-amber-900/10 to-transparent -z-10"></div>
-        <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-amber-800/10 blur-3xl -z-10"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-amber-700/10 blur-3xl -z-10"></div>
-        
-        {/* Section Header */}
-        <div className="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-4"
-          >
-            <span className="text-amber-500 font-medium uppercase tracking-wider text-sm accent-text">Celebrating Our Culture</span>
-          </motion.div>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="section-title text-amber-400 mb-4 punjabi-accent"
-          >
+    <div className="w-full">
+      {/* Section Header */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <span>Living Traditions</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight mb-3">
             {title}
-          </motion.h2>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-amber-100/80 body-text max-w-2xl mx-auto"
-          >
+          </h2>
+
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
             {description}
-          </motion.p>
+          </p>
         </div>
 
-        {/* Navigation Controls - Desktop */}
-        <div className="hidden md:flex justify-center gap-4 mb-6">
-          <Button
-            size="lg"
-            variant="outline"
+        {/* Carousel Navigation Buttons */}
+        <div className="flex items-center gap-3">
+          <button
             onClick={() => carouselApi?.scrollPrev()}
             disabled={!canScrollPrev}
-            className="rounded-full w-12 h-12 p-0 border-amber-700 text-amber-500 hover:bg-amber-900/50 hover:text-amber-400 disabled:opacity-50 transition-all duration-300"
+            aria-label="Previous event slide"
+            className="w-11 h-11 rounded-full flex items-center justify-center bg-zinc-900 border border-white/10 text-zinc-300 hover:text-amber-300 hover:border-amber-400/50 disabled:opacity-40 disabled:hover:border-white/10 disabled:hover:text-zinc-300 transition-all shadow-md"
           >
-            <ArrowLeft className="size-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
+            <ArrowLeft className="w-5 h-5" />
+          </button>
+          <button
             onClick={() => carouselApi?.scrollNext()}
             disabled={!canScrollNext}
-            className="rounded-full w-12 h-12 p-0 border-amber-700 text-amber-500 hover:bg-amber-900/50 hover:text-amber-400 disabled:opacity-50 transition-all duration-300"
+            aria-label="Next event slide"
+            className="w-11 h-11 rounded-full flex items-center justify-center bg-zinc-900 border border-white/10 text-zinc-300 hover:text-amber-300 hover:border-amber-400/50 disabled:opacity-40 disabled:hover:border-white/10 disabled:hover:text-zinc-300 transition-all shadow-md"
           >
-            <ArrowRight className="size-5" />
-          </Button>
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
 
-      {/* Carousel */}
-      <div className="w-full mt-6">
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            loop: true,
-            breakpoints: {
-              "(max-width: 768px)": {
-                dragFree: true,
-              },
-            },
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="ml-4 md:ml-8 lg:ml-12">
-            {items.map((item, index) => (
-              <CarouselItem
-                key={item.id}
-                className="pl-4 md:pl-6 lg:pl-8 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/4"
-              >
-                <Link 
-                  href={item.href} 
-                  className="block"
-                  onMouseEnter={() => setHoveredItem(item.id)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -10 }}
-                    className="relative overflow-hidden rounded-2xl punjabi-card-hover bg-gray-900 shadow-lg aspect-[4/5]"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900/70 to-transparent z-10"></div>
-                    
-                    <div className="relative h-full w-full overflow-hidden">
-                      <Image
-                        src={`/${item.image}`}
-                        alt={item.title}
-                        fill
-                        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      
-                      {/* Cultural pattern overlay */}
-                      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%27%20height%3D%2760%27%20viewBox%3D%270%200%2060%2060%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cg%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.05%27%3E%3Cpath%20d%3D%27M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%27%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-30 mix-blend-overlay"></div>
+      {/* Carousel Container */}
+      <Carousel
+        setApi={setCarouselApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4 sm:-ml-6">
+          {items.map((item, index) => (
+            <CarouselItem
+              key={item.id || index}
+              className="pl-4 sm:pl-6 basis-full sm:basis-1/2 lg:basis-1/3"
+            >
+              <Link href={item.href} className="group block h-full">
+                <div className="relative h-[440px] rounded-2xl overflow-hidden glass-panel border border-white/10 group-hover:border-amber-400/50 transition-all duration-500 flex flex-col justify-between p-6 shadow-xl group-hover:shadow-2xl group-hover:shadow-amber-500/10">
+                  {/* Background Image with Zoom */}
+                  <Image
+                    src={`/${item.image}`}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 -z-10"
+                  />
+
+                  {/* Dark Multi-stop Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 -z-10 transition-opacity duration-300 group-hover:opacity-90" />
+
+                  {/* Top Meta Chips */}
+                  <div className="flex items-center justify-between gap-2 z-10">
+                    {item.category && (
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-amber-300 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-amber-500/30">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.date && (
+                      <span className="text-[11px] font-medium text-zinc-300 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                        {item.date}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Bottom Content Area */}
+                  <div className="z-10 pt-6">
+                    <h3 className="text-2xl font-serif font-bold text-white group-hover:text-amber-300 transition-colors mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-zinc-300 text-xs sm:text-sm line-clamp-3 leading-relaxed mb-4">
+                      {item.description}
+                    </p>
+
+                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-400 group-hover:text-amber-300 transition-colors">
+                      <span>Explore Event Details</span>
+                      <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
-                    
-                    <div className="absolute bottom-0 left-0 right-0 p-5 z-20 transition-all duration-300">
-                      <h3 className="card-title text-amber-400 mb-2 drop-shadow-md">{item.title}</h3>
-                      
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ 
-                          height: hoveredItem === item.id ? 'auto' : 0,
-                          opacity: hoveredItem === item.id ? 1 : 0
-                        }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-amber-100/80 text-sm mb-4">{item.description}</p>
-                        <div className="flex items-center text-amber-500 text-sm font-medium">
-                          Explore Event <ExternalLink className="ml-2 size-4" />
-                        </div>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-        
-        {/* Pagination Dots */}
-        <div className="mt-6 flex justify-center gap-2">
-          {items.map((_, index) => (
-            <button
-              key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index ? "w-6 bg-amber-500" : "w-2 bg-amber-700/50"}`}
-              onClick={() => carouselApi?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+                  </div>
+                </div>
+              </Link>
+            </CarouselItem>
           ))}
-        </div>
-        
-        {/* Mobile Navigation Controls */}
-        <div className="flex justify-center gap-4 mt-4 md:hidden">
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => carouselApi?.scrollPrev()}
-            disabled={!canScrollPrev}
-            className="rounded-full w-10 h-10 p-0 border-amber-700 text-amber-500"
-          >
-            <ArrowLeft className="size-4" />
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => carouselApi?.scrollNext()}
-            disabled={!canScrollNext}
-            className="rounded-full w-10 h-10 p-0 border-amber-700 text-amber-500"
-          >
-            <ArrowRight className="size-4" />
-          </Button>
-        </div>
+        </CarouselContent>
+      </Carousel>
+
+      {/* Pagination indicators */}
+      <div className="flex items-center justify-center gap-2 mt-8">
+        {items.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => carouselApi?.scrollTo(idx)}
+            aria-label={`Jump to slide ${idx + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              currentSlide === idx
+                ? "w-8 bg-amber-400"
+                : "w-2 bg-zinc-700 hover:bg-zinc-500"
+            }`}
+          />
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

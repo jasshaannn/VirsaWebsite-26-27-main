@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Sparkles, Search, Users, X, Heart } from "lucide-react";
+import { Search, Users, X, Heart } from "lucide-react";
 import App_Navbar from "../components/navbar";
 import JoinCTA from "../components/JoinCTA";
 import { FooterSection } from "../components/footer-section";
@@ -377,7 +377,7 @@ export default function CoreTeamPage() {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#08080a] text-zinc-100 flex flex-col">
+    <div className="min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col">
       <App_Navbar />
 
       {/* Hero Section */}

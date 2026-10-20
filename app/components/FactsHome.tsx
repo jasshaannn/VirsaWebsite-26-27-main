@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BookOpen, Music, Users, Award, Drum, MapPin, Sparkles, HeartHandshake } from "lucide-react";
+import { BookOpen, Music, Users, Award, Drum, MapPin, HeartHandshake } from "lucide-react";
 import { GlowingEffect } from "@/app/components/ui/glowing-effect";
 import { cn } from "@/app/lib/utils";
 
@@ -10,8 +10,8 @@ export function GlowingEffectDemo() {
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-3">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full antique-pill border border-[#C5A059]/30 text-[#EAD7B0] text-xs font-serif font-semibold uppercase tracking-widest mb-3">
+          <span className="text-xs text-[#C5A059]">◈</span>
           <span>Heritage & Society Impact</span>
         </div>
 

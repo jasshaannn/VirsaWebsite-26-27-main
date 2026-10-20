@@ -1,38 +1,26 @@
 import React from "react";
 import App_Navbar from "./components/navbar";
 import HeroSection from "./components/HeroSection";
-import PhotoSliderHome from "./components/PhotoSliderHome";
-import CulturalPillars from "./components/CulturalPillars";
-import { Gallery4Demo } from "./components/galleryslider";
-import { GlowingEffectDemo } from "./components/FactsHome";
-import JoinCTA from "./components/JoinCTA";
+import AntiqueHeritageChronicle from "./components/AntiqueHeritageChronicle";
+import AntiqueRoyalLegacy from "./components/AntiqueRoyalLegacy";
 import { FooterSection } from "./components/footer-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#08080a] text-zinc-100 flex flex-col">
-      {/* Floating Glass Navigation */}
+    <div className="min-h-screen bg-[#0A0806] text-[#EAD7B0] flex flex-col">
+      {/* Antique Floating Navigation */}
       <App_Navbar />
 
-      {/* Cinematic Hero Showreel */}
+      {/* Chapter I: Royal Antique Hero Showreel */}
       <HeroSection />
 
-      {/* Living Moments Live Reel */}
-      <PhotoSliderHome />
+      {/* Chapter II: The Four Pillars of Virsa & Living Archives */}
+      <AntiqueHeritageChronicle />
 
-      {/* The Four Cultural Pillars of Virsa */}
-      <CulturalPillars />
+      {/* Chapter III: Antique Royal Heritage Plaque & Legacy */}
+      <AntiqueRoyalLegacy />
 
-      {/* Signature Annual Celebrations */}
-      <Gallery4Demo />
-
-      {/* Heritage & Impact Bento Grid */}
-      <GlowingEffectDemo />
-
-      {/* Call To Action / Join Us */}
-      <JoinCTA />
-
-      {/* Modern Cultural Footer */}
+      {/* Antique Royal Footer */}
       <FooterSection />
     </div>
   );

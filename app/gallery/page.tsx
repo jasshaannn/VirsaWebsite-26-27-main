@@ -7,7 +7,6 @@ import { FooterSection } from "../components/footer-section";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import {
-  Sparkles,
   Calendar,
   Filter,
   Eye,
@@ -238,7 +237,7 @@ export default function GalleryPage() {
       : currentYearPhotos.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-[#08080a] text-zinc-100 flex flex-col">
+    <div className="min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col">
       <App_Navbar />
 
       {/* Hero Header */}

@@ -11,20 +11,18 @@ export default function HeroSection() {
   useEffect(() => {
     setMounted(true);
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Fallback if browser blocks autoplay
-      });
+      videoRef.current.play().catch(() => {});
     }
   }, []);
 
   return (
-    <section className="relative w-full min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden pt-28 pb-20">
-      {/* Background Video Layer */}
+    <section className="relative w-full min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden pt-24 pb-14 px-4 sm:px-6">
+      {/* Background Video Layer with Antique Warm Sepia/Walnut Vignette */}
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
         {mounted && (
           <video
             ref={videoRef}
-            className="w-full h-full object-cover scale-105 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover scale-105 filter brightness-[0.7] contrast-[1.1] sepia-[0.15]"
             autoPlay
             loop
             muted
@@ -35,61 +33,58 @@ export default function HeroSection() {
           </video>
         )}
 
-        {/* Cinematic Multi-layered Vignette & Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/65 to-black/85" />
-        <div className="absolute inset-0 bg-radial-vignette opacity-70" />
-        <div className="absolute inset-0 punjabi-pattern opacity-20 pointer-events-none" />
+        {/* Antique Walnut & Deep Charcoal Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0806] via-[#0A0806]/75 to-black/85" />
+        <div className="absolute inset-0 antique-texture opacity-30 pointer-events-none" />
 
-        {/* Ambient Golden Glow spots */}
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-10 -right-20 w-[400px] h-[300px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
+        {/* Ambient Warm Brass Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[220px] bg-[#C5A059]/12 rounded-full blur-[140px] pointer-events-none" />
       </div>
 
       {/* Main Content Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
-        {/* Cultural Top Tag Pill with Royal Thapar University styling (No sparkles) */}
-        <div className="inline-flex items-center gap-2.5 sm:gap-3 px-5 py-2 rounded-full glass-pill border border-amber-500/30 text-xs sm:text-sm font-medium mb-8 animate-in fade-in slide-in-from-bottom-3 duration-700 shadow-[0_0_25px_rgba(245,158,11,0.18)]">
-          <span className="tracking-wide text-zinc-200 font-serif">
+      <div className="relative max-w-5xl mx-auto w-full flex flex-col items-center text-center">
+        {/* Antique Royal Heritage Badge (No sparkles, pure regal dignity) */}
+        <div className="inline-flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-1.5 rounded-full antique-pill border border-[#C5A059]/40 mb-6 shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          <span className="text-[10px] text-[#C5A059] font-serif">◈</span>
+          <span className="tracking-wide text-[#EAD7B0] font-serif text-xs sm:text-sm">
             ਵਿਰਸਾ • ਸਾਡਾ ਵਿਰਸਾ, ਸਾਡੀ ਪਹਿਚਾਣ
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-          <span className="font-serif font-extrabold tracking-[0.26em] text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 uppercase text-[11px] sm:text-xs">
+          <span className="w-1 h-1 rounded-full bg-[#C5A059]" />
+          <span className="font-serif font-bold tracking-[0.26em] text-transparent bg-clip-text bg-gradient-to-r from-[#FFF0D4] via-[#D4AF37] to-[#A67C37] uppercase text-[10px] sm:text-[11px]">
             THAPAR UNIVERSITY
           </span>
+          <span className="text-[10px] text-[#C5A059] font-serif">◈</span>
         </div>
 
-        {/* Main Hero Headline */}
-        <h1 className="hero-title text-white max-w-5xl mb-6 font-serif tracking-tight text-balance">
-          Preserving Punjab&apos;s Living Spirit,{" "}
-          <span className="block mt-1 text-gradient-gold drop-shadow-[0_4px_24px_rgba(245,158,11,0.3)]">
-            Igniting Every Stage & Soul.
+        {/* Antique Royal Headline */}
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#FFF6E5] tracking-tight mb-4 leading-tight">
+          Preserving Punjab&apos;s Living Soul, <br />
+          <span className="antique-gold-text drop-shadow-[0_2px_15px_rgba(197,160,89,0.3)]">
+            The Living Pride of Our Heritage.
           </span>
         </h1>
 
-        {/* Subtitle / Society Mission */}
-        <p className="max-w-2xl text-base sm:text-lg md:text-xl text-zinc-300 font-light leading-relaxed mb-10 text-balance">
-          From the roaring dhol of <span className="text-amber-300 font-normal">Bhangra</span> and elegance of{" "}
-          <span className="text-amber-300 font-normal">Giddha</span> to the serene service of{" "}
-          <span className="text-amber-300 font-normal">Gurpurab</span> and grand carnivals of{" "}
-          <span className="text-amber-300 font-normal">Virsa Mela</span>.
+        {/* Subtitle */}
+        <p className="max-w-2xl text-sm sm:text-base md:text-lg text-[#D4C3A3] font-serif font-light leading-relaxed mb-8 text-balance">
+          Carrying forward timeless folk traditions, thunderous Dhol rhythms, and selfless community seva across the generations.
         </p>
 
-        {/* CTA Button Actions */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+        {/* Antique CTA Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <Link
             href="/events"
-            className="group flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black font-semibold text-sm sm:text-base tracking-wide shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:shadow-[0_0_40px_rgba(245,158,11,0.6)] transform hover:-translate-y-0.5 transition-all duration-300"
+            className="antique-button-gold px-7 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2"
           >
-            <span>Explore Signature Events</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <span>Explore Celebrations</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
 
           <Link
             href="/gallery"
-            className="flex items-center gap-2 px-7 py-3.5 rounded-full glass-panel hover:bg-white/10 text-white font-medium text-sm sm:text-base border border-white/15 transition-all duration-300 transform hover:-translate-y-0.5"
+            className="antique-button-outline px-6 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2"
           >
-            <Images className="w-4 h-4 text-amber-400" />
-            <span>View Gallery</span>
+            <Images className="w-4 h-4 text-[#C5A059]" />
+            <span>Living Archives</span>
           </Link>
         </div>
       </div>

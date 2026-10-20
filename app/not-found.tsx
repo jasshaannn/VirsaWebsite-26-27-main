@@ -3,11 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Home, Sparkles } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen bg-[#08080a] text-zinc-100 flex flex-col items-center justify-center p-6 overflow-hidden">
+    <div className="relative min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col items-center justify-center p-6 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 punjabi-pattern opacity-15 pointer-events-none" />
@@ -25,8 +25,8 @@ export default function NotFound() {
           />
         </div>
 
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-4">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full antique-pill border border-[#C5A059]/30 text-[#EAD7B0] text-xs font-serif font-semibold uppercase tracking-widest mb-4">
+          <span className="text-xs text-[#C5A059]">◈</span>
           <span>ਸਫ਼ਾ ਨਹੀਂ ਲੱਭਿਆ • Error 404</span>
         </div>
 

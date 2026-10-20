@@ -6,7 +6,6 @@ import Link from "next/link";
 import App_Navbar from "../components/navbar";
 import { FooterSection } from "../components/footer-section";
 import {
-  Sparkles,
   Calendar,
   MapPin,
   Clock,
@@ -191,7 +190,7 @@ export default function EventsPage() {
       : allEvents.filter((ev) => ev.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#08080a] text-zinc-100 flex flex-col">
+    <div className="min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col">
       <App_Navbar />
 
       {/* Hero Banner Section */}
@@ -200,8 +199,8 @@ export default function EventsPage() {
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="text-center max-w-3xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-[#C5A059]/30 text-[#EAD7B0] text-xs font-serif font-semibold uppercase tracking-widest mb-4">
+            <span className="text-xs text-[#C5A059]">◈</span>
             <span>Campus Celebrations & Fests</span>
           </div>
 

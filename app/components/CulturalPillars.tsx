@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Drum, Flame, HeartHandshake, Sparkles, Theater, ArrowRight } from "lucide-react";
+import { Drum, Flame, HeartHandshake, Theater, ArrowRight } from "lucide-react";
 
 const pillars = [
   {
@@ -60,8 +60,8 @@ export default function CulturalPillars() {
 
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-4">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full antique-pill border border-[#C5A059]/30 text-[#EAD7B0] text-xs font-serif font-semibold uppercase tracking-widest mb-4">
+          <span className="text-xs text-[#C5A059]">◈</span>
           <span>The Four Pillars of Virsa</span>
         </div>
 

@@ -5,56 +5,56 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 4.5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 24 9.8% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 98%;
+    --background: 30 20% 3.5%;
+    --foreground: 40 30% 95%;
+    --card: 30 15% 6%;
+    --card-foreground: 40 30% 95%;
+    --popover: 30 15% 5%;
+    --popover-foreground: 40 30% 95%;
+    --primary: 40 65% 52%;
+    --primary-foreground: 30 20% 6%;
+    --secondary: 30 12% 14%;
+    --secondary-foreground: 40 30% 95%;
+    --muted: 30 12% 14%;
+    --muted-foreground: 35 15% 62%;
+    --accent: 40 65% 52%;
+    --accent-foreground: 40 30% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 38 92% 50%;
-    --radius: 0.85rem;
+    --border: 35 25% 18%;
+    --input: 35 25% 18%;
+    --ring: 40 65% 52%;
+    --radius: 0.65rem;
 
-    /* Punjabi Cultural Signature Tones */
-    --punjabi-gold: 43 96% 56%;
-    --punjabi-amber: 32 95% 50%;
-    --punjabi-saffron: 24 95% 53%;
-    --punjabi-ruby: 350 89% 50%;
-    --punjabi-maroon: 345 80% 28%;
-    --punjabi-obsidian: 240 10% 4%;
+    /* Antique Punjabi Royal Tones */
+    --antique-gold: #D4AF37;
+    --antique-brass: #C5A059;
+    --antique-bronze: #8C6D37;
+    --antique-parchment: #F5E6CA;
+    --antique-obsidian: #0A0806;
+    --antique-walnut: #14100B;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 4.5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 24 9.8% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 98%;
+    --background: 30 20% 3.5%;
+    --foreground: 40 30% 95%;
+    --card: 30 15% 6%;
+    --card-foreground: 40 30% 95%;
+    --popover: 30 15% 5%;
+    --popover-foreground: 40 30% 95%;
+    --primary: 40 65% 52%;
+    --primary-foreground: 30 20% 6%;
+    --secondary: 30 12% 14%;
+    --secondary-foreground: 40 30% 95%;
+    --muted: 30 12% 14%;
+    --muted-foreground: 35 15% 62%;
+    --accent: 40 65% 52%;
+    --accent-foreground: 40 30% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 38 92% 50%;
+    --border: 35 25% 18%;
+    --input: 35 25% 18%;
+    --ring: 40 65% 52%;
   }
 }
 
@@ -63,126 +63,127 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#08080a] text-zinc-100;
+    @apply bg-[#0A0806] text-[#EAD7B0];
     overflow-x: hidden;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Antique Brass */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #08080a;
+  background: #0A0806;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #3A2F1F;
   border-radius: 9999px;
-  border: 2px solid #08080a;
+  border: 1px solid #1A140E;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+  background: #C5A059;
 }
 
-/* Luxury Punjabi Aesthetics */
-.text-gradient-gold {
-  background: linear-gradient(135deg, #fffbeb 0%, #fbbf24 35%, #f59e0b 70%, #d97706 100%);
+/* Antique Gold Leaf Text Gradients */
+.text-gradient-gold,
+.antique-gold-text {
+  background: linear-gradient(135deg, #FFF2DC 0%, #E6C280 30%, #C5A059 65%, #9E7B35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-saffron {
-  background: linear-gradient(135deg, #fef3c7 0%, #f59e0b 45%, #ea580c 100%);
+.antique-royal-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E6CA 40%, #D4AF37 80%, #9B782D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-ruby {
-  background: linear-gradient(135deg, #fecdd3 0%, #f43f5e 50%, #be123c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Glassmorphism Styles */
-.glass-panel {
-  background: rgba(18, 18, 23, 0.7);
+/* Antique Framing & Glass Panels */
+.antique-card {
+  background: linear-gradient(160deg, rgba(24, 18, 12, 0.85) 0%, rgba(13, 10, 7, 0.95) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(197, 160, 89, 0.03);
 }
 
-.glass-panel-gold {
-  background: linear-gradient(135deg, rgba(30, 24, 16, 0.6) 0%, rgba(15, 15, 18, 0.75) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-.glass-pill {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.gold-glow {
-  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
-}
-
-.gold-glow-hover {
+.antique-card-hover {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.gold-glow-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -5px rgba(245, 158, 11, 0.35);
-  border-color: rgba(245, 158, 11, 0.5);
+.antique-card-hover:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(212, 175, 55, 0.07);
+  transform: translateY(-2px);
 }
 
-/* Cultural Subtle Geometric Jaali Pattern */
-.punjabi-pattern {
-  background-image: radial-gradient(rgba(245, 158, 11, 0.12) 1px, transparent 1px);
-  background-size: 28px 28px;
+.antique-pill {
+  background: rgba(30, 22, 14, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.25);
 }
 
-.punjabi-mesh-pattern {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
+/* Antique Ornamental Borders & Corners */
+.antique-frame {
+  position: relative;
+  border: 1px solid rgba(197, 160, 89, 0.35);
 }
 
-/* Smooth Slide marquee */
-@keyframes slideLoop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.antique-frame::before {
+  content: "◈";
+  position: absolute;
+  top: -9px;
+  left: -7px;
+  color: #C5A059;
+  font-size: 11px;
+  line-height: 1;
 }
 
-.slideshow-container {
-  animation: slideLoop 35s linear infinite;
+.antique-frame::after {
+  content: "◈";
+  position: absolute;
+  bottom: -9px;
+  right: -7px;
+  color: #C5A059;
+  font-size: 11px;
+  line-height: 1;
 }
 
-.slideshow-container:hover {
-  animation-play-state: paused;
+/* Antique Parchment & Royal Jaali Overlay */
+.punjabi-pattern,
+.antique-texture {
+  background-image: radial-gradient(rgba(197, 160, 89, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Shimmer animation */
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+/* Antique Button */
+.antique-button-gold {
+  background: linear-gradient(135deg, #DFB967 0%, #C5A059 50%, #A47E32 100%);
+  color: #120E08;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255, 235, 185, 0.3);
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.25);
+  transition: all 0.25s ease;
+}
+.antique-button-gold:hover {
+  background: linear-gradient(135deg, #EAC77A 0%, #D4AF37 50%, #B8903F 100%);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+  transform: translateY(-1px);
 }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.15), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite linear;
+.antique-button-outline {
+  background: rgba(18, 14, 9, 0.7);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  color: #F5E6CA;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: all 0.25s ease;
+}
+.antique-button-outline:hover {
+  background: rgba(35, 26, 17, 0.9);
+  border-color: rgba(212, 175, 55, 0.6);
+  color: #FFF;
+  transform: translateY(-1px);
 }

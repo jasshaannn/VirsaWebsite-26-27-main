@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight, Heart, Users } from "lucide-react";
+import { ArrowRight, Heart, Users } from "lucide-react";
 
 export default function JoinCTA() {
   return (
@@ -13,8 +13,8 @@ export default function JoinCTA() {
         <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-orange-600/15 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full antique-pill border border-[#C5A059]/30 text-[#EAD7B0] text-xs font-serif font-semibold uppercase tracking-widest mb-6">
+            <span className="text-xs text-[#C5A059]">◈</span>
             <span>Join The Virsa Family</span>
           </div>
 

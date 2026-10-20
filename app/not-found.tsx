@@ -7,7 +7,7 @@ import { ArrowLeft, Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col items-center justify-center p-6 overflow-hidden">
+    <div className="relative min-h-screen bg-[#08080a] text-zinc-100 flex flex-col items-center justify-center p-6 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 punjabi-pattern opacity-15 pointer-events-none" />

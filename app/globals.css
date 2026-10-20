@@ -5,24 +5,24 @@
 
 @layer base {
   :root {
-    --background: 30 20% 3.5%;
-    --foreground: 40 30% 95%;
-    --card: 30 15% 6%;
-    --card-foreground: 40 30% 95%;
-    --popover: 30 15% 5%;
-    --popover-foreground: 40 30% 95%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4.5%;
+    --popover-foreground: 0 0% 98%;
     --primary: 40 65% 52%;
     --primary-foreground: 30 20% 6%;
-    --secondary: 30 12% 14%;
-    --secondary-foreground: 40 30% 95%;
-    --muted: 30 12% 14%;
-    --muted-foreground: 35 15% 62%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
     --accent: 40 65% 52%;
-    --accent-foreground: 40 30% 95%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
-    --border: 35 25% 18%;
-    --input: 35 25% 18%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
     --ring: 40 65% 52%;
     --radius: 0.65rem;
 
@@ -31,29 +31,28 @@
     --antique-brass: #C5A059;
     --antique-bronze: #8C6D37;
     --antique-parchment: #F5E6CA;
-    --antique-obsidian: #0A0806;
-    --antique-walnut: #14100B;
+    --antique-obsidian: #08080A;
   }
 
   .dark {
-    --background: 30 20% 3.5%;
-    --foreground: 40 30% 95%;
-    --card: 30 15% 6%;
-    --card-foreground: 40 30% 95%;
-    --popover: 30 15% 5%;
-    --popover-foreground: 40 30% 95%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4.5%;
+    --popover-foreground: 0 0% 98%;
     --primary: 40 65% 52%;
     --primary-foreground: 30 20% 6%;
-    --secondary: 30 12% 14%;
-    --secondary-foreground: 40 30% 95%;
-    --muted: 30 12% 14%;
-    --muted-foreground: 35 15% 62%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
     --accent: 40 65% 52%;
-    --accent-foreground: 40 30% 95%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
-    --border: 35 25% 18%;
-    --input: 35 25% 18%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
     --ring: 40 65% 52%;
   }
 }
@@ -63,23 +62,23 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#0A0806] text-[#EAD7B0];
+    @apply bg-[#08080a] text-zinc-100;
     overflow-x: hidden;
   }
 }
 
-/* Custom Scrollbar - Antique Brass */
+/* Custom Scrollbar - Deep Obsidian */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0806;
+  background: #08080a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3A2F1F;
+  background: #27272a;
   border-radius: 9999px;
-  border: 1px solid #1A140E;
+  border: 1px solid #08080a;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #C5A059;
@@ -99,13 +98,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Antique Framing & Glass Panels */
+/* Antique Framing on Deep Black Panels */
 .antique-card {
-  background: linear-gradient(160deg, rgba(24, 18, 12, 0.85) 0%, rgba(13, 10, 7, 0.95) 100%);
+  background: linear-gradient(160deg, rgba(16, 16, 22, 0.92) 0%, rgba(9, 9, 12, 0.98) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(197, 160, 89, 0.28);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(197, 160, 89, 0.03);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.9);
 }
 
 .antique-card-hover {
@@ -113,12 +112,12 @@
 }
 .antique-card-hover:hover {
   border-color: rgba(212, 175, 55, 0.55);
-  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(212, 175, 55, 0.07);
+  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.95);
   transform: translateY(-2px);
 }
 
 .antique-pill {
-  background: rgba(30, 22, 14, 0.65);
+  background: rgba(14, 14, 18, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(197, 160, 89, 0.25);
@@ -150,17 +149,17 @@
   line-height: 1;
 }
 
-/* Antique Parchment & Royal Jaali Overlay */
+/* Pattern Overlay */
 .punjabi-pattern,
 .antique-texture {
-  background-image: radial-gradient(rgba(197, 160, 89, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Antique Button */
+/* Antique Buttons */
 .antique-button-gold {
   background: linear-gradient(135deg, #DFB967 0%, #C5A059 50%, #A47E32 100%);
-  color: #120E08;
+  color: #08080a;
   font-weight: 700;
   letter-spacing: 0.08em;
   border: 1px solid rgba(255, 235, 185, 0.3);
@@ -174,7 +173,7 @@
 }
 
 .antique-button-outline {
-  background: rgba(18, 14, 9, 0.7);
+  background: rgba(14, 14, 18, 0.8);
   border: 1px solid rgba(197, 160, 89, 0.35);
   color: #F5E6CA;
   font-weight: 600;
@@ -182,7 +181,7 @@
   transition: all 0.25s ease;
 }
 .antique-button-outline:hover {
-  background: rgba(35, 26, 17, 0.9);
+  background: rgba(24, 24, 30, 0.95);
   border-color: rgba(212, 175, 55, 0.6);
   color: #FFF;
   transform: translateY(-1px);

@@ -115,7 +115,7 @@ export default function AntiqueHeritageChronicle() {
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover filter brightness-[0.85] contrast-[1.05] group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0806] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-transparent to-transparent" />
             </div>
 
             {/* Content */}

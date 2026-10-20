@@ -42,8 +42,8 @@ export default function App_Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "py-2 bg-[#0A0806]/95 backdrop-blur-xl border-b border-[#C5A059]/30 shadow-[0_8px_30px_rgba(0,0,0,0.8)]"
-            : "py-3.5 bg-gradient-to-b from-[#0A0806]/90 via-[#0A0806]/50 to-transparent backdrop-blur-sm"
+            ? "py-2 bg-[#08080a]/95 backdrop-blur-xl border-b border-[#C5A059]/30 shadow-[0_8px_30px_rgba(0,0,0,0.8)]"
+            : "py-3.5 bg-gradient-to-b from-[#08080a]/90 via-[#08080a]/50 to-transparent backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +120,7 @@ export default function App_Navbar() {
             onClick={() => setIsMenuOpen(false)}
           />
 
-          <div className="fixed top-[66px] left-0 right-0 max-h-[calc(100vh-70px)] overflow-y-auto bg-[#100C08] border-b border-[#C5A059]/30 shadow-2xl p-5 flex flex-col gap-4">
+          <div className="fixed top-[66px] left-0 right-0 max-h-[calc(100vh-70px)] overflow-y-auto bg-[#08080a] border-b border-[#C5A059]/30 shadow-2xl p-5 flex flex-col gap-4">
             <div className="flex items-center justify-between pb-2.5 border-b border-[#C5A059]/20">
               <span className="text-xs uppercase tracking-wider text-[#C5A059] font-serif font-bold">
                 Navigation
@@ -169,7 +169,7 @@ export default function App_Navbar() {
                   href="https://www.instagram.com/virsa.thapar/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-[#18120B] border border-[#C5A059]/30 text-[#C5A059]"
+                  className="p-1.5 rounded-md bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059]"
                   aria-label="Instagram"
                 >
                   <FaInstagram size={15} />
@@ -178,7 +178,7 @@ export default function App_Navbar() {
                   href="http://linkedin.com/company/ssa-virsa/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-[#18120B] border border-[#C5A059]/30 text-[#C5A059]"
+                  className="p-1.5 rounded-md bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059]"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin size={15} />

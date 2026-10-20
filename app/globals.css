@@ -5,61 +5,56 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 346.8 77.2% 49.8%;
-    --radius: 0.5rem;
-    --chart-1: 20 70% 50%;
-    --chart-2: 40 70% 50%;
-    --chart-3: 60 70% 50%;
-    --chart-4: 80 70% 50%;
-    --chart-5: 100 70% 50%;
-
-    /* Punjabi Cultural Colors */
-    --punjabi-gold: 43 100% 50%;
-    --punjabi-red: 0 100% 40%;
-    --punjabi-orange: 30 100% 50%;
-    --punjabi-maroon: 0 59% 30%;
-    --punjabi-green: 120 40% 40%;
-    --punjabi-blue: 210 100% 40%;
-  }
-
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4.5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 24 9.8% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
+    --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 346.8 77.2% 49.8%;
+    --ring: 38 92% 50%;
+    --radius: 0.85rem;
+
+    /* Punjabi Cultural Signature Tones */
+    --punjabi-gold: 43 96% 56%;
+    --punjabi-amber: 32 95% 50%;
+    --punjabi-saffron: 24 95% 53%;
+    --punjabi-ruby: 350 89% 50%;
+    --punjabi-maroon: 345 80% 28%;
+    --punjabi-obsidian: 240 10% 4%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4.5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 38 92% 50%;
   }
 }
 
@@ -68,47 +63,97 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#08080a] text-zinc-100;
+    overflow-x: hidden;
   }
 }
 
-/* Custom Punjabi Cultural Gradients */
-.punjabi-gold-gradient {
-  background: linear-gradient(135deg, hsl(var(--punjabi-gold)) 0%, hsl(var(--punjabi-orange)) 100%);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 2px solid #08080a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
 }
 
-.punjabi-red-gradient {
-  background: linear-gradient(135deg, hsl(var(--punjabi-red)) 0%, hsl(var(--punjabi-maroon)) 100%);
+/* Luxury Punjabi Aesthetics */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fffbeb 0%, #fbbf24 35%, #f59e0b 70%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Card Hover Effects */
-.punjabi-card-hover {
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.text-gradient-saffron {
+  background: linear-gradient(135deg, #fef3c7 0%, #f59e0b 45%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.punjabi-card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.text-gradient-ruby {
+  background: linear-gradient(135deg, #fecdd3 0%, #f43f5e 50%, #be123c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Decorative Border */
-.punjabi-border {
-  border-width: 2px;
-  border-style: solid;
-  border-image: linear-gradient(to right, hsl(var(--punjabi-gold)), hsl(var(--punjabi-red))) 1;
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(18, 18, 23, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Animation for cultural elements */
-@keyframes gentle-sway {
-  0%, 100% { transform: rotate(-1deg); }
-  50% { transform: rotate(1deg); }
+.glass-panel-gold {
+  background: linear-gradient(135deg, rgba(30, 24, 16, 0.6) 0%, rgba(15, 15, 18, 0.75) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.punjabi-animate {
-  animation: gentle-sway 3s ease-in-out infinite;
-  transform-origin: center bottom;
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+}
+
+.gold-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-glow-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -5px rgba(245, 158, 11, 0.35);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+/* Cultural Subtle Geometric Jaali Pattern */
+.punjabi-pattern {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.punjabi-mesh-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Smooth Slide marquee */
 @keyframes slideLoop {
   0% {
     transform: translateX(0);
@@ -119,13 +164,25 @@
 }
 
 .slideshow-container {
-  animation: slideLoop 30s linear infinite;
+  animation: slideLoop 35s linear infinite;
 }
 
 .slideshow-container:hover {
   animation-play-state: paused;
 }
 
-body {
-  padding: 0;
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.15), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
 }

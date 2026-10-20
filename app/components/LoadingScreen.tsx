@@ -1,28 +1,27 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface LoadingScreenProps {
-  duration?: number; // How long to show the loading screen (in milliseconds)
-  fadeOutDuration?: number; // How long the fade out animation takes
-  title?: string; // Custom title text
-  subtitle?: string; // Custom subtitle text
+  duration?: number;
+  fadeOutDuration?: number;
+  title?: string;
+  subtitle?: string;
 }
 
-export default function LoadingScreen({ 
-  duration = 1000, 
-  fadeOutDuration = 500,
+export default function LoadingScreen({
+  duration = 900,
+  fadeOutDuration = 400,
   title = "VIRSA",
-  subtitle = "Loading your experience..."
+  subtitle = "Celebrating Punjab's Living Heritage...",
 }: LoadingScreenProps) {
   const [isVisible, setIsVisible] = useState(true);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
-    // Start fade out after specified duration
     const timer = setTimeout(() => {
-      setIsAnimating(true);
-      
-      // Complete fade out after animation duration
+      setIsFadingOut(true);
       setTimeout(() => {
         setIsVisible(false);
       }, fadeOutDuration);
@@ -31,47 +30,61 @@ export default function LoadingScreen({
     return () => clearTimeout(timer);
   }, [duration, fadeOutDuration]);
 
-  // Don't render anything if not visible
   if (!isVisible) return null;
 
   return (
-    <div 
-      className={`fixed inset-0 z-50 transition-opacity ease-in-out ${
-        isAnimating ? 'opacity-0' : 'opacity-100'
+    <div
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#070709] transition-opacity ease-out ${
+        isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
-      style={{ 
+      style={{
         transitionDuration: `${fadeOutDuration}ms`,
-        // Prevent scrolling while loading screen is active
-        overflow: 'hidden'
+        overflow: "hidden",
       }}
     >
-      {/* Main container */}
-      <div className="h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-        
-        {/* Simple gradient background instead of sparkles */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-black to-orange-900/20"></div>
-        
-        {/* Content overlay */}
-        <div className="flex flex-col items-center justify-center gap-6 relative z-20 px-4">
-          
-          {/* Main title with gradient and pulse animation */}
-          <h1 className="md:text-7xl text-4xl lg:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 animate-pulse">
-            {title}
-          </h1>
-          
-          {/* Animated dots */}
-          <div className="flex space-x-2 mb-4">
-            <div className="w-3 h-3 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-3 h-3 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-3 h-3 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+      {/* Ambient background glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 punjabi-pattern opacity-20 pointer-events-none" />
+
+      {/* Content Card */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-sm">
+        {/* Animated Brand Emblem */}
+        <div className="relative w-20 h-20 mb-6 flex items-center justify-center">
+          <div className="absolute inset-0 rounded-full border border-amber-500/30 animate-ping opacity-25" />
+          <div className="absolute inset-0 rounded-full border border-amber-400/40 animate-spin" style={{ animationDuration: "8s" }} />
+          <div className="relative w-16 h-16 rounded-full overflow-hidden bg-black/80 border border-amber-400 p-2 flex items-center justify-center shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+            <Image
+              src="/logo.png"
+              alt="Virsa Logo"
+              width={64}
+              height={64}
+              priority
+              unoptimized
+              className="object-contain"
+            />
           </div>
-          
-          {/* Subtitle */}
-          <p className="text-neutral-300 text-center text-lg font-light tracking-wide">
-            {subtitle}
-          </p>
-          
         </div>
+
+        {/* Title & Gurmukhi */}
+        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-widest mb-1.5 flex items-center gap-2">
+          <span>{title}</span>
+          <span className="text-sm font-sans font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+            ਵਿਰਸਾ
+          </span>
+        </h1>
+
+        <p className="text-xs text-zinc-400 tracking-wider uppercase mb-5 font-medium">
+          Thapar Cultural Society
+        </p>
+
+        {/* Sleek Golden Progress Line */}
+        <div className="w-48 h-1 rounded-full bg-zinc-800 overflow-hidden mb-4 relative">
+          <div className="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 rounded-full animate-shimmer w-full" />
+        </div>
+
+        <p className="text-xs text-zinc-400 font-light italic">
+          {subtitle}
+        </p>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export const FooterSection: React.FC = () => {
   return (
     <footer
       id="contact"
-      className="relative bg-[#070503] border-t border-[#C5A059]/25 text-[#D4C3A3] overflow-hidden"
+      className="relative bg-[#050507] border-t border-[#C5A059]/25 text-[#D4C3A3] overflow-hidden"
     >
       {/* Background Subtle Watermark */}
       <div className="absolute inset-0 bg-[url('/logo.png')] bg-center bg-no-repeat opacity-[0.025] pointer-events-none bg-contain" />
@@ -134,7 +134,7 @@ export const FooterSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 rounded-lg bg-[#140F0A] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
               >
                 <FaInstagram size={14} />
               </a>
@@ -143,7 +143,7 @@ export const FooterSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-8 h-8 rounded-lg bg-[#140F0A] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
               >
                 <FaLinkedin size={14} />
               </a>
@@ -152,7 +152,7 @@ export const FooterSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-8 h-8 rounded-lg bg-[#140F0A] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
               >
                 <FaFacebook size={14} />
               </a>

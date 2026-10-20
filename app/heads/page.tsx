@@ -315,7 +315,7 @@ export default function HeadsPage() {
   }, [allMembersList, searchQuery, selectedCategory]);
 
   return (
-    <div className="min-h-screen bg-[#0A0806] text-zinc-100 flex flex-col">
+    <div className="min-h-screen bg-[#08080a] text-zinc-100 flex flex-col">
       <App_Navbar />
 
       {/* Hero Section */}

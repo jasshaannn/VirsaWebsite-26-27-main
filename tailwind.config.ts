@@ -9,7 +9,20 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			serif: ["var(--font-playfair)", "serif"],
+  			sans: ["var(--font-inter)", "sans-serif"],
+  			display: ["var(--font-playfair)", "serif"],
+  			accent: ["var(--font-poppins)", "sans-serif"],
+  		},
   		colors: {
+  			antique: {
+  				gold: '#D4AF37',
+  				brass: '#C5A059',
+  				bronze: '#8C6D37',
+  				parchment: '#F5E6CA',
+  				obsidian: '#08080A',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

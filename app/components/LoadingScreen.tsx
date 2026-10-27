@@ -50,8 +50,8 @@ export default function LoadingScreen({
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-sm">
         {/* Animated Brand Emblem */}
         <div className="relative w-20 h-20 mb-6 flex items-center justify-center">
-          <div className="absolute inset-0 rounded-full border border-amber-500/30 animate-ping opacity-25" />
-          <div className="absolute inset-0 rounded-full border border-amber-400/40 animate-spin" style={{ animationDuration: "8s" }} />
+          <div className="absolute inset-0 rounded-full border border-amber-500/30 animate-ping motion-reduce:animate-none opacity-25" />
+          <div className="absolute inset-0 rounded-full border border-amber-400/40 animate-spin motion-reduce:animate-none" style={{ animationDuration: "8s" }} />
           <div className="relative w-16 h-16 rounded-full overflow-hidden bg-black/80 border border-amber-400 p-2 flex items-center justify-center shadow-[0_0_30px_rgba(245,158,11,0.3)]">
             <Image
               src="/logo.png"

@@ -77,14 +77,18 @@ export default function App_Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-1.5 lg:gap-2 px-3 py-1 rounded-full bg-[#18120B]/70 border border-[#C5A059]/25 backdrop-blur-md">
+            <nav
+              aria-label="Primary navigation"
+              className="hidden md:flex items-center gap-1.5 lg:gap-2 px-3 py-1 rounded-full bg-[#18120B]/70 border border-[#C5A059]/25 backdrop-blur-md"
+            >
               {menuItems.map((item) => {
                 const isActive = pathname === item.path;
                 return (
                   <Link
                     key={item.path}
                     href={item.path}
-                    className={`relative px-4 py-1.5 rounded-full text-xs font-serif uppercase tracking-wider transition-all duration-200 ${
+                    aria-current={isActive ? "page" : undefined}
+                    className={`relative px-4 py-2 rounded-full text-xs font-serif uppercase tracking-wider transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] ${
                       isActive
                         ? "text-[#FFF] bg-[#C5A059]/25 shadow-[0_0_15px_rgba(197,160,89,0.25)] border border-[#C5A059]/40 font-bold"
                         : "text-[#D4C3A3] hover:text-[#FFF] hover:bg-white/5 font-medium"
@@ -103,8 +107,9 @@ export default function App_Navbar() {
             <button
               type="button"
               aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden relative w-9 h-9 flex items-center justify-center rounded-lg bg-[#18120B]/80 border border-[#C5A059]/30 text-[#EAD7B0] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors focus:outline-none"
+              className="md:hidden relative min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-[#18120B]/80 border border-[#C5A059]/30 text-[#EAD7B0] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -114,7 +119,12 @@ export default function App_Navbar() {
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden animate-in fade-in duration-200">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation Menu"
+          className="fixed inset-0 z-40 md:hidden animate-in fade-in duration-200"
+        >
           <div
             className="fixed inset-0 bg-black/85 backdrop-blur-md"
             onClick={() => setIsMenuOpen(false)}
@@ -130,15 +140,16 @@ export default function App_Navbar() {
               </span>
             </div>
 
-            <nav className="flex flex-col gap-1">
+            <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
               {menuItems.map((item) => {
                 const isActive = pathname === item.path;
                 return (
                   <Link
                     key={item.path}
                     href={item.path}
+                    aria-current={isActive ? "page" : undefined}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg transition-all ${
+                    className={`flex items-center justify-between min-h-[44px] px-3.5 py-2.5 rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] ${
                       isActive
                         ? "bg-[#C5A059]/20 border border-[#C5A059]/40 text-[#FFF] font-bold font-serif"
                         : "text-[#D4C3A3] hover:bg-white/5 hover:text-white font-serif"
@@ -169,19 +180,19 @@ export default function App_Navbar() {
                   href="https://www.instagram.com/virsa.thapar/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059]"
-                  aria-label="Instagram"
+                  className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059] hover:bg-[#C5A059]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
+                  aria-label="Virsa Instagram"
                 >
-                  <FaInstagram size={15} />
+                  <FaInstagram size={16} />
                 </a>
                 <a
                   href="http://linkedin.com/company/ssa-virsa/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059]"
-                  aria-label="LinkedIn"
+                  className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-zinc-900 border border-[#C5A059]/30 text-[#C5A059] hover:bg-[#C5A059]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
+                  aria-label="Virsa LinkedIn"
                 >
-                  <FaLinkedin size={15} />
+                  <FaLinkedin size={16} />
                 </a>
               </div>
             </div>

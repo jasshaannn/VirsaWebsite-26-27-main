@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Heart, Users } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 export default function JoinCTA() {
   return (
@@ -29,9 +30,13 @@ export default function JoinCTA() {
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#contact"
-              className="px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black font-semibold text-sm tracking-wide shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(245,158,11,0.6)] transform hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2"
+              href="https://www.instagram.com/virsa.thapar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Virsa on Instagram"
+              className="px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black font-semibold text-sm tracking-wide shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(245,158,11,0.6)] transform hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2.5 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
             >
+              <FaInstagram className="w-4 h-4 text-black" />
               <span>Get in Touch With Us</span>
               <ArrowRight className="w-4 h-4" />
             </a>

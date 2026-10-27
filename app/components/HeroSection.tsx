@@ -61,7 +61,7 @@ export default function HeroSection() {
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <Link
             href="/events"
-            className="antique-button-gold px-7 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2"
+            className="antique-button-gold min-h-[44px] px-7 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080a]"
           >
             <span>Explore Celebrations</span>
             <ArrowRight className="w-4 h-4" />
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
           <Link
             href="/gallery"
-            className="antique-button-outline px-6 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2"
+            className="antique-button-outline min-h-[44px] px-6 py-3 rounded-full text-xs sm:text-sm font-serif uppercase tracking-wider flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080a]"
           >
             <Images className="w-4 h-4 text-[#C5A059]" />
             <span>Living Archives</span>

@@ -345,13 +345,16 @@ export default function HeadsPage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search society heads by name, position or department"
               placeholder="Search by name, position or department..."
               className="w-full pl-11 pr-10 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 backdrop-blur-md transition-all shadow-lg"
             />
             {searchQuery && (
               <button
+                type="button"
                 onClick={() => setSearchQuery("")}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+                aria-label="Clear search input"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-full p-1"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -363,8 +366,10 @@ export default function HeadsPage() {
             {filterTabs.map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setSelectedCategory(tab.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                aria-pressed={selectedCategory === tab.id}
+                className={`min-h-[38px] px-4 py-2 rounded-full text-xs font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
                   selectedCategory === tab.id
                     ? "bg-amber-500 text-black shadow-md shadow-amber-500/20"
                     : "glass-panel text-zinc-300 hover:text-white hover:bg-white/10 border-white/10"
@@ -401,14 +406,14 @@ export default function HeadsPage() {
                 >
                   <div>
                     {/* Portrait container */}
-                    <div className="relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden mb-4 bg-zinc-950 border border-white/10">
+                    <div className="relative aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-zinc-950 border border-white/10">
                       {member.imageUrl ? (
                         <Image
                           src={member.imageUrl}
                           alt={member.name}
                           fill
                           sizes="(max-width: 768px) 100vw, 25vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                         />
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-amber-950/60 to-zinc-900">
@@ -517,14 +522,14 @@ export default function HeadsPage() {
               >
                 <div>
                   {/* Portrait photo or Laurel crest */}
-                  <div className="relative h-64 w-full rounded-xl overflow-hidden mb-3.5 bg-zinc-950 border border-white/5">
+                  <div className="relative aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] w-full rounded-xl overflow-hidden mb-3.5 bg-zinc-950 border border-white/5">
                     {head.imageUrl ? (
                       <Image
                         src={head.imageUrl}
                         alt={head.name}
                         fill
                         sizes="(max-width: 768px) 100vw, 25vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-950 p-4">

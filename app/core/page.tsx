@@ -407,20 +407,23 @@ export default function CoreTeamPage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search core team member by name"
               placeholder="Search member by name..."
               className="w-full pl-11 pr-10 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/50 backdrop-blur-md transition-all shadow-lg"
             />
             {searchQuery && (
               <button
+                type="button"
                 onClick={() => setSearchQuery("")}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+                aria-label="Clear search input"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-full p-1"
               >
                 <X className="w-4 h-4" />
               </button>
             )}
           </div>
 
-          <p className="text-xs text-zinc-400">
+          <p className="text-xs text-zinc-400" aria-live="polite">
             Showing {filteredMembers.length} of {coreTeamMembers.length} active core members
           </p>
         </div>
@@ -449,13 +452,14 @@ export default function CoreTeamPage() {
               >
                 <div>
                   {/* Portrait photo or Laurel crest */}
-                  <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden mb-4 bg-zinc-950 border border-white/5">
+                  <div className="relative aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] w-full rounded-xl overflow-hidden mb-4 bg-zinc-950 border border-white/5">
                     {member.imageUrl ? (
-                      <img
+                      <Image
                         src={member.imageUrl}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-950 p-4">

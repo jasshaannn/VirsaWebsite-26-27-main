@@ -85,21 +85,21 @@ export const FooterSection: React.FC = () => {
                 <Flame className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#FFF2DC]">Virsa Mela</h5>
-                  <p className="text-[10px] text-[#A69578]">Spring cultural carnival & folk stalls</p>
+                  <p className="text-[11px] text-[#C5B496]">Spring cultural carnival & folk stalls</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Music className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#FFF2DC]">Sham-e-Virasat</h5>
-                  <p className="text-[10px] text-[#A69578]">Musical theatre, Bhangra & Giddha</p>
+                  <p className="text-[11px] text-[#C5B496]">Musical theatre, Bhangra & Giddha</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Heart className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#FFF2DC]">Gurpurab & Chabeel</h5>
-                  <p className="text-[10px] text-[#A69578]">Sacred kirtan, langar & summer seva</p>
+                  <p className="text-[11px] text-[#C5B496]">Sacred kirtan, langar & summer seva</p>
                 </div>
               </div>
             </div>
@@ -111,14 +111,14 @@ export const FooterSection: React.FC = () => {
               <span>◈</span>
               <span>Campus & Contact</span>
             </h4>
-            <div className="space-y-2 text-xs font-serif text-[#B8A78A] mb-3">
+            <div className="space-y-2 text-xs font-serif text-[#C5B496] mb-4">
               <div className="flex items-start gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0" />
                 <span>Thapar Institute, Patiala, Punjab - 147004</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-[#C5A059] flex-shrink-0" />
-                <a href="mailto:virsa@thapar.edu" className="hover:text-[#FFF] transition-colors">
+                <a href="mailto:virsa@thapar.edu" className="hover:text-[#FFF] focus-visible:underline focus-visible:outline-none transition-colors">
                   virsa@thapar.edu
                 </a>
               </div>
@@ -128,40 +128,40 @@ export const FooterSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <a
                 href="https://www.instagram.com/virsa.thapar/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                aria-label="Virsa Instagram"
+                className="min-w-[44px] min-h-[44px] rounded-xl bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 hover:border-[#D4AF37] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
               >
-                <FaInstagram size={14} />
+                <FaInstagram size={16} />
               </a>
               <a
                 href="http://linkedin.com/company/ssa-virsa/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                aria-label="Virsa LinkedIn"
+                className="min-w-[44px] min-h-[44px] rounded-xl bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 hover:border-[#D4AF37] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
               >
-                <FaLinkedin size={14} />
+                <FaLinkedin size={16} />
               </a>
               <a
                 href="https://www.facebook.com/VirsaTIET/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="w-8 h-8 rounded-lg bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 transition-all"
+                aria-label="Virsa Facebook"
+                className="min-w-[44px] min-h-[44px] rounded-xl bg-zinc-900 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059]/20 hover:border-[#D4AF37] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
               >
-                <FaFacebook size={14} />
+                <FaFacebook size={16} />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-8 pt-4 border-t border-[#C5A059]/20 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#A69578] font-serif">
+        <div className="mt-8 pt-4 border-t border-[#C5A059]/20 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#C5B496] font-serif">
           <p>© {new Date().getFullYear()} Virsa Punjabi Cultural Society. All rights reserved.</p>
           <div className="flex items-center gap-2 font-serif">
             <span className="text-[#C5A059] font-bold tracking-[0.2em]">THAPAR UNIVERSITY</span>

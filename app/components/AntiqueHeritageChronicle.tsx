@@ -94,7 +94,7 @@ export default function AntiqueHeritageChronicle() {
           <Link
             key={idx}
             href={pillar.link}
-            className="group antique-card antique-card-hover rounded-xl p-4 flex flex-col justify-between overflow-hidden relative"
+            className="group antique-card antique-card-hover rounded-xl p-4 flex flex-col justify-between overflow-hidden relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]"
           >
             {/* Top Row: Roman Numeral & Gurmukhi Tag */}
             <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#C5A059]/20">
@@ -158,12 +158,12 @@ export default function AntiqueHeritageChronicle() {
         </div>
 
         {/* Compact Horizontal Reel */}
-        <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-thin">
+        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-thin snap-x snap-mandatory overscroll-x-contain">
           {archiveMoments.map((item, i) => (
             <Link
               key={i}
               href="/gallery"
-              className="relative w-36 sm:w-44 h-24 sm:h-28 rounded-lg overflow-hidden flex-shrink-0 border border-[#C5A059]/20 group hover:border-[#C5A059]/60 transition-all"
+              className="relative w-36 sm:w-44 h-24 sm:h-28 rounded-lg overflow-hidden flex-shrink-0 snap-start border border-[#C5A059]/20 group hover:border-[#C5A059]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] transition-all"
             >
               <Image
                 src={item.src}
